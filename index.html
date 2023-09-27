@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest API Task</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="d-flex justify-content-center" style="color: blue">
+      <h2>Table Management Application</h2>
+    </div>
+    <div class="d-flex justify-content-center" style="height: 100vh">
+      <form
+        class="justify-content-center text-center"
+        onSubmit="addData(event)"
+      >
+        <div><input type="hidden" id="itemId" /></div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Select Amount</label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="amount"
+            required
+          >
+            <option selected></option>
+            <option value="100">$ 100</option>
+            <option value="200">$ 200</option>
+            <option value="300">$ 300</option>
+            <option value="400">$ 400</option>
+            <option value="500">$ 500</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Select Dish</label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="description"
+            required
+          >
+            <option selected></option>
+            <option value="Fried Rice">Fried Rice</option>
+            <option value="Chicken Briyani">Chicken Briyani</option>
+            <option value="Momos">Momos</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Select Table</label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="category"
+            required
+          >
+            <option selected></option>
+            <option value="Table 1">Table 1</option>
+            <option value="Table 2">Table 2</option>
+            <option value="Table 3">Table 3</option>
+          </select>
+        </div>
+        <br />
+        <button
+          type="button"
+          class="btn btn-secondary"
+          style="background-color: rgb(85, 85, 248)"
+          onclick="updateData(event)"
+        >
+          Update Bill
+        </button>
+        <button
+          type="submit"
+          class="btn btn-secondary"
+          style="background-color: rgb(85, 85, 248)"
+        >
+          Add To Bill
+        </button>
+      </form>
+      <ul id="item">
+        <h3 class="text-center">Table 1</h3>
+        <ul
+          class="table1"
+          id="table1-list"
+          style="background-color: rgb(85, 248, 85)"
+        ></ul>
+        <h3 class="text-center">Table 2</h3>
+        <ul
+          class="table2"
+          id="table2-list"
+          style="background-color: rgb(120, 248, 85)"
+        ></ul>
+        <h3 class="text-center">Table 3</h3>
+        <ul
+          class="table3"
+          id="table3-list"
+          style="background-color: rgb(99, 248, 85)"
+        ></ul>
+      </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+    <script src="./index.js"></script>
+
+    <script></script>
+  </body>
+</html>
